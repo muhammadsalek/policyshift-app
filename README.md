@@ -30,8 +30,9 @@
 </div>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="600">
+  <img src="policyshift-pipeline-animated.svg" width="800" alt="PolicyShift live reactive pipeline — animated">
 </p>
+<p align="center"><sub>Animated pipeline: data flows through Upload → Exploratory → ML Model → Simulation → Report in real time within the app.</sub></p>
 
 ---
 
@@ -103,6 +104,11 @@ This repository contains the full source code for **PolicyShift v2.0 (Competitio
 </td>
 </tr>
 </table>
+
+<p align="center">
+  <img src="policyshift-importance-chart.svg" width="700" alt="Random Forest variable importance — animated bar chart">
+</p>
+<p align="center"><sub>Illustrative Random Forest variable-importance ranking as rendered in the 🤖 ML Model tab — bars animate in on load.</sub></p>
 
 ---
 
