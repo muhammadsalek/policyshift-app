@@ -1,0 +1,85 @@
+<svg width="900" height="240" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A5276"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6" fill="#00d4ff"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="240" fill="url(#bg)" rx="14"/>
+
+  <!-- connecting line path (used for flowing particles) -->
+  <path id="flowpath" d="M110,140 L290,140 L470,140 L650,140 L830,140" stroke="#233042" stroke-width="3" fill="none"/>
+  <path d="M110,140 L290,140" stroke="#00d4ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M290,140 L470,140" stroke="#00d4ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M470,140 L650,140" stroke="#00d4ff" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M650,140 L830,140" stroke="#00d4ff" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- flowing particles -->
+  <circle r="5" fill="#00d4ff">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M110,140 L830,140"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="4" fill="#f59e0b">
+    <animateMotion dur="4s" begin="1.3s" repeatCount="indefinite" path="M110,140 L830,140"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="4s" begin="1.3s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="4" fill="#7c3aed">
+    <animateMotion dur="4s" begin="2.6s" repeatCount="indefinite" path="M110,140 L830,140"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="4s" begin="2.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- stage boxes -->
+  <g font-family="Verdana, Arial, sans-serif">
+
+    <!-- Stage 1 -->
+    <rect x="40" y="90" width="140" height="100" rx="16" fill="url(#boxGrad)" stroke="#00d4ff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <text x="110" y="130" text-anchor="middle" font-size="26" fill="#ffffff">📂</text>
+    <text x="110" y="155" text-anchor="middle" font-size="12" fill="#e5e7eb">Data Upload</text>
+    <text x="110" y="172" text-anchor="middle" font-size="9" fill="#9ca3af">survey · CSV</text>
+
+    <!-- Stage 2 -->
+    <rect x="220" y="90" width="140" height="100" rx="16" fill="url(#boxGrad)" stroke="#00d4ff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4s" begin="0.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="290" y="130" text-anchor="middle" font-size="26" fill="#ffffff">📊</text>
+    <text x="290" y="155" text-anchor="middle" font-size="12" fill="#e5e7eb">Exploratory</text>
+    <text x="290" y="172" text-anchor="middle" font-size="9" fill="#9ca3af">descriptive stats</text>
+
+    <!-- Stage 3 -->
+    <rect x="400" y="90" width="140" height="100" rx="16" fill="url(#boxGrad)" stroke="#00d4ff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4s" begin="1.6s" repeatCount="indefinite"/>
+    </rect>
+    <text x="470" y="130" text-anchor="middle" font-size="26" fill="#ffffff">🤖</text>
+    <text x="470" y="155" text-anchor="middle" font-size="12" fill="#e5e7eb">ML Model</text>
+    <text x="470" y="172" text-anchor="middle" font-size="9" fill="#9ca3af">Random Forest</text>
+
+    <!-- Stage 4 -->
+    <rect x="580" y="90" width="140" height="100" rx="16" fill="url(#boxGrad)" stroke="#00d4ff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4s" begin="2.4s" repeatCount="indefinite"/>
+    </rect>
+    <text x="650" y="130" text-anchor="middle" font-size="26" fill="#ffffff">🔮</text>
+    <text x="650" y="155" text-anchor="middle" font-size="12" fill="#e5e7eb">Simulation</text>
+    <text x="650" y="172" text-anchor="middle" font-size="9" fill="#9ca3af">g-computation</text>
+
+    <!-- Stage 5 -->
+    <rect x="760" y="90" width="140" height="100" rx="16" fill="url(#boxGrad)" stroke="#00d4ff" stroke-width="1.5">
+      <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="4s" begin="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="830" y="130" text-anchor="middle" font-size="26" fill="#ffffff">📥</text>
+    <text x="830" y="155" text-anchor="middle" font-size="12" fill="#e5e7eb">Download</text>
+    <text x="830" y="172" text-anchor="middle" font-size="9" fill="#9ca3af">HTML report</text>
+
+  </g>
+
+  <text x="450" y="30" text-anchor="middle" font-family="Verdana, Arial, sans-serif" font-size="15" fill="#00d4ff" font-weight="bold">PolicyShift v2.0 — Live Reactive Pipeline</text>
+</svg>
